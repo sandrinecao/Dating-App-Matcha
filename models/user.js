@@ -259,9 +259,11 @@ exports.SelectAllFromEmail = function (email, callback) {
 };
 
 exports.save = function (profil, userId) {
+
   var post = {
     firstName: profil.firstName,
     lastName: profil.lastName,
+    username: profil.username,
     age: profil.age,
     email: profil.email,
     gender: profil.gender,

@@ -135,6 +135,14 @@ router.post('/dashboard/form', checkProfil, function(req, res) {
 		geoloc: req.body.geoloc,
 		position: req.body.position
 	};
+	User.getByusername(req.body.username, function (rows){
+		if (rows){
+		  console.log("this username is already used")
+		  req.session.error = 'This username is already used.';
+		  res.redirect('/auth/signup');
+		}
+		else 
+		{
 	console.log(req.body.position)
 	console.log(profil);
 	User.save(profil, req.session.userId);
@@ -154,6 +162,8 @@ router.post('/dashboard/form', checkProfil, function(req, res) {
 			req.session.profilCompleted = 1;
 			res.redirect('/users/dashboard');
 		})
+	}
+})
 })
 
 //NEW PASSWORD SECTION
