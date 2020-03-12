@@ -1,0 +1,144 @@
+<span id="currentUser" style="display: none;">{{currentUser}}</span>
+<input type="hidden" id="url" value="{{url}}" />
+<div style="padding-bottom: 150px;">
+    <br>
+
+    <div class="small-middle-container">
+        {{!-- <div class="container" id="matchaSize" style="width: 40rem;">
+             </div> --}}
+
+        <div class="card-deck">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3 class="card-title" id="username">{{user.username}}</h3>
+
+                    <h6 class="card-subtitle mb-2 text-muted">
+
+                        {{!-- USER CONNECTED OR NOT --}}
+                        <div id="status" style="background-color: red;"></div>
+                        {{!-- USER CONNECTED OR NOT --}}
+                        <br>
+                        <span id="last-connection">Last connection:
+                            {{user.lastConnection}}</span>
+
+                    </h6>
+                </div>
+                <br>
+                <h5>{{#if likeMe}}
+                    <span id="likeme" style="color: #EB6864;"><i class="glyphicon glyphicon-heart-empty"></i> Amazing,
+                        this user likes you!</span>
+                    {{/if}}<br></h5>
+
+                <img id="profil-main-pic" class="card-img-top img-responsive" src="{{mainpix}}"
+                    style="width: 250px; height: auto;">
+                <br>
+
+
+                <div class="card-block">
+
+                    {{#if connected}}
+                    <div class="control-group" id="btn-chat-container">
+                        <a href="/profile/{{user.username}}/chat"><button type="button" class="btn btn-primary">Start
+                                Conversation</button></a>
+                    </div>
+                    <br>
+                    {{/if}}
+
+
+                    <div class="row">
+                        {{!-- LIKE/UNLIKE --}}
+                        <div class="col" id="like-container">
+                            <form action="" method="post" name="form-like" id="form-like">
+                                {{#if like}}
+                                <i class="glyphicon glyphicon-heart-profile" id="i-like"
+                                    style="font-size: 4em; color: red;"></i>
+                                <input type="hidden" id="btn-like" value="Unlike" style="display: inline" />
+                                {{else}}
+                                <i class="glyphicon glyphicon-heart-profile" id="i-like"
+                                    style="font-size: 4em; color: grey;"></i>
+                                <input type="hidden" id="btn-like" value="Like" style="display: inline" />
+                            </form>
+                            {{/if}}
+                        </div>
+                        {{!-- LIKE/UNLIKE --}}
+                        {{!-- BLOCK/UNBLOCK --}}
+                        <div class="col" id="block-container">
+
+                            <form action="" method="post" name="form-block" id="form-block">
+                                {{#if block}}
+                                <i class="glyphicon glyphicon-remove-profile" id="i-block"
+                                    style="font-size: 4em; color: black;"></i>
+                                <input type="hidden" id="btn-block" value="Unblock" style="display: inline" />
+                                {{else}}
+                                <i class="glyphicon glyphicon-remove-profile" id="i-block"
+                                    style="font-size: 4em; color: grey;"></i>
+                                <input type="hidden" id="btn-block" value="Block" style="display: inline" />
+                            </form>
+                            {{/if}}
+                        </div>
+                        {{!-- BLOCK/UNBLOCK --}}
+                    </div>
+                </div>
+
+
+                <div class="card-body">
+
+                    <p class="card-text">
+
+                        <h4>{{user.popularity}}<i class="glyphicon glyphicon-flash-profile" id="i-pop"
+                                style="font-size: 2em; color: #FFBE00;"></i></h4>
+
+                        <br>
+                        <h5>{{distance}} km</h5>
+                        <br>
+                        <h5>{{user.firstName}} {{user.lastName}}</h5>
+                        <p>{{user.age}}, {{user.gender}}, {{user.sexpref}}</p>
+
+                        <br>
+                        <h5>About me</h5>
+                        <p>{{user.bio}}</p>
+                        <br>
+                        <h5>My Tags interests</h5>
+                        <p>
+                            <div class="row justify-content-center">
+                                {{#each tags}}
+                                <span class="tag">{{this.name}}</span>
+                                {{/each}}
+                            </div>
+                        </p>
+                        <br>
+                        <h5>My gallery</h5>
+                        <p>
+                            <div class="small-middle-container">
+                                {{#each images}}
+                                <div class="col">
+                                    <img class="profile-img-container img-responsive" src="{{this.name}}" />
+                                </div>
+                                {{/each}}
+                            </div>
+                        </p>
+
+
+                    </p>
+                </div>
+                <div class="card-footer">
+
+                    <div id="report-container">
+                        <form action="" method="post" name="form-report" id="form-report">
+                            <span id="report-content"><i class="glyphicon glyphicon-bullhorn" id="i-report"
+                                    style="font-size: 3em; color: black;"></i></span>
+                            <input type="hidden" id="btn-report" value="Report" style="display: inline" />
+                        </form>
+                    </div>
+
+                    <small class="text-muted">Report</small>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/static/js/profile.js"></script>
+<script type="text/javascript" src="/static/js/notification.js"></script>

@@ -1,0 +1,28 @@
+<div style="padding-bottom: 150px;">
+<h1>Welcome to <span id="welcome" style="color:#EB6864;"><i class="glyphicon glyphicon-fire2"></i>MATCHA</h1></span>
+<div class="container">
+  <p class="lead">It's never too late to find your soulmate.</p>
+  <div class="username-form">
+    <form action="" method="POST">
+    <label for="Username">Username</label>
+    <input type="text" name="username" class="form-control" id="username" placeholder="Username">
+  </div>
+  <div class="password-form">
+    <label for="password">Password</label>
+    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary" value="Sign in">Login</button>
+</form>
+
+<p></p>
+
+<p>Haven't signed up yet? <a href="/auth/signup">Create a new account now!</a></p>
+<p>Forgot your password? <a href="/auth/sendpwd">Get a new password here.</a></p>
+</div>
+<!--if errors -->
+{{#if error}}
+  <div class="alert alert-danger">
+  <strong>Sorry:</strong> {{ error }}
+</div>
+{{/if }}
+</div>

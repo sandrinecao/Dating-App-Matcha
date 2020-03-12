@@ -1,0 +1,25 @@
+{
+  "name": "window-location-origin",
+  "version": "0.1.0",
+  "authors": [
+    "Kyle Welsby <kyle@mekyle.com>"
+  ],
+  "description": "Add support for browsers that don't natively support window.location.origin",
+  "keywords": [
+    "window",
+    "location",
+    "origin",
+    "origin",
+    "polifil"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/kylewelsby/window-location-origin",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main": "src/window-location-origin.js"
+}
