@@ -1,0 +1,47 @@
+{
+  "name": "matcha",
+  "version": "1.0.0",
+  "description": "second project of the web branch.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "scao",
+  "license": "ISC",
+  "dependencies": {
+    "ajax": "0.0.4",
+    "async": "^2.6.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "crypto": "^1.0.1",
+    "dateformat": "^2.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "0.0.6",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "faker": "^4.1.0",
+    "fs": "0.0.1-security",
+    "fs-extra": "^8.1.0",
+    "generate-password": "^1.5.1",
+    "geolib": "^3.2.1",
+    "geolocation": "^0.2.0",
+    "handlebars-helpers": "^0.8.4",
+    "ip-location": "^1.0.1",
+    "jquery": "^3.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "ngx-dropzone-wrapper": "^9.0.0",
+    "nodemailer": "^6.4.3",
+    "password-hash": "^1.2.2",
+    "path": "^0.12.7",
+    "random-coordinates": "^1.0.1",
+    "random-location": "^1.1.2",
+    "socket.io": "^1.7.4",
+    "window-location-origin": "^0.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
