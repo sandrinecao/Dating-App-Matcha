@@ -12,18 +12,18 @@ var async = require('async');
 
 router.get('/', function (req, res) {
     if (req.session.userId && req.session.userId != undefined) {
-        // if (req.session.profilCompleted == 0) {
-        //     res.render('error', { layout: 'dashboard', error: "Please complete your profile to see this incredible feature. ;)" });
-        //     return;
-        // } else if (req.session.mainPic == 0) {
-        //     res.render('error', { layout: 'dashboard', error: "Please set a profile picture to see this feature. We need it to find you the best match! ;)" });
-        //     return;
-        // } else {
+        if (req.session.profilCompleted == 0) {
+            res.render('error', { layout: 'dashboard', error: "Please complete your profile to see this incredible feature. ;)" });
+            return;
+        } else if (req.session.mainPic == 0) {
+            res.render('error', { layout: 'dashboard', error: "Please set a profile picture to see this feature. We need it to find you the best match! ;)" });
+            return;
+        } else {
             User.getAllBySexPref(req.session.currentUser.gender, req.session.currentUser.sexpref, req.session.userId, function (all) {
                 userhelper.removeCurrentUser(req.session.currentUser.username, all)
                 userhelper.getTagsFromUser(req, res, all, true);
             });
-        // }
+        }
     } else {
         res.redirect('/');
     }

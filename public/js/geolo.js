@@ -18,10 +18,6 @@ if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(maPosition, errorHandler);
     }
 
-// function showPosition(position) {
-//     x.innerHTML = "Latitude: " + position.coords.latitude +
-//         "<br>Longitude: " + position.coords.longitude;
-// }
 
 function initialize() {
     var address = (document.getElementById('pac-input'));
