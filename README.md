@@ -1,5 +1,13 @@
 # Matcha
 Tinder-like web application using Node.js, Express, MySQL and Handlebars as part of 42's web branch project.
+Users can interact with each other. As per 42's rules, no ORM, external validators or User Accounts Manager were allowed.
+
+**Features**
+- Sign in and Log In forms
+- Editing user's profile
+- Search and filters
+- Live chat with sockets
+- Live notification system
 
 This app has been deployed on Heroku only for testing purposes - you probably won't find any real human ;) 
 
