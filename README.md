@@ -14,3 +14,18 @@ You can create your own account from scratch or use this test account with the f
 
 
 Have fun!
+
+## Homepage
+![alt text](https://github.com/sandrinecao/Matcha/blob/master/git_images/home.png "Homepage")
+
+## Dashboard
+![alt text](https://github.com/sandrinecao/Matcha/blob/master/git_images/dashboard.png "Dashboard")
+
+## Matches
+![alt text](https://github.com/sandrinecao/Matcha/blob/master/git_images/matches.png "Matches")
+
+## User
+![alt text](https://github.com/sandrinecao/Matcha/blob/master/git_images/user.png "User profile")
+
+## Chat
+![alt text](https://github.com/sandrinecao/Matcha/blob/master/git_images/chat.png "Chat")
