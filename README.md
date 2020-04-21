@@ -1,7 +1,7 @@
 # Matcha
-Tinder-like web application using Node.js, Express, MySQL and Handlebars as part of 42's web branch project.
-Users can interact with each other. As per 42's rules, no ORM, external validators or User Accounts Manager were allowed.
+Tinder-like web application using Node.js, Express, MySQL and Handlebars as part of 42's web branch project. As per 42's rules, no ORM, external validators or User Accounts Manager were allowed.
 
+Users can interact with each other and find their ultimate match depending on their distance and common interests.
 
 This app has been deployed on Heroku only for testing purposes - you probably won't find any real human ;) 
 
