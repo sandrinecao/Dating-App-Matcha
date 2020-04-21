@@ -3,19 +3,18 @@ Tinder-like web application using Node.js, Express, MySQL and Handlebars as part
 
 Users can interact with each other and find their ultimate match depending on their geolocalisation and common interests.
 
-This app has been deployed on Heroku only for testing purposes - you probably won't find any real human ;) 
-
-You can create your own account from scratch or use this test account with the following details: 
-
+This app has been deployed on Heroku only for your own fun - you probably won't find any real human ;) 
 
 [https://matcha-scao.herokuapp.com/](https://matcha-scao.herokuapp.com/)
+
+You can create your own account from scratch or use this test account with the following details: 
 
 **Username:** Matcha 
 
 **Password:** Matcha123!
 
 
-Have fun!
+Enjoy!
 
 Project made with fellow student @gogrkovi
 
