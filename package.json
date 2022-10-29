@@ -38,7 +38,7 @@
     "path": "^0.12.7",
     "random-coordinates": "^1.0.1",
     "random-location": "^1.1.2",
-    "socket.io": "^1.7.4",
+    "socket.io": "^4.5.3",
     "window-location-origin": "^0.1.0"
   },
   "devDependencies": {
